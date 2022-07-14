@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "apollo-muse": {
+      "hosting": {
+        "Apollo": [
+          "apollo-muse"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "apollo-muse"
+  }
+}
