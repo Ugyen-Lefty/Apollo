@@ -1,0 +1,25 @@
+footer {
+  position: fixed;
+  bottom: 0%;
+  width: calc(100vw - 30px);
+  background: rgba(34, 40, 49, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.9px);
+  -webkit-backdrop-filter: blur(9.9px);
+  margin: 0px 15px 15px;
+}
+
+i {
+  color: #EEEEEE;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+  font-size: 20px;
+  text-align: center;
+}

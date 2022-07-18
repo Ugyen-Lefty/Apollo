@@ -1,0 +1,18 @@
+<div class="main">
+  <div class="container p-4" style="padding-bottom: 100px;">
+    <h1 class="pt-5 display-2 main-title">Explore</h1>
+    <ng-container *ngIf="topTracks">
+      <div *ngFor="let track of topTracks" class="my-5">
+        <p class="text-light">{{ track?.name }} - {{ track?.artist?.name }}</p>
+        <p class="text-light">played <b>{{ track?.playcount }}</b> times</p>
+        <!-- <img class="" src="{{ track?.image[1]['#text'] }}"> -->
+      </div>
+    </ng-container>
+    <ng-container *ngIf="!topTracks">
+      <h1 class="text-light pt-5 display-2" style="height: 100vh;">Oops Something went wrong</h1>
+    </ng-container>
+  </div>
+  <div class="pt-5">
+    <app-navbar></app-navbar>
+  </div>
+</div>
