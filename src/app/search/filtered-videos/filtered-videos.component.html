@@ -1,0 +1,25 @@
+<div class="main">
+  <ng-container *ngIf="results && !loading">
+    <ng-container *ngIf="!showVideoDetails">
+      <div *ngFor="let res of results">
+        <div class="">
+          <div (click)="getVideoDetails(res);" class="text-center p-4">
+            <img class="img-fluid img-thumbnail my-4" src="{{ res?.snippet?.thumbnails?.medium?.url }}">
+            <p class="text-light text-center">{{ res?.snippet?.title }}</p>
+            <p class="text-light text-center">{{ res?.snippet?.channelTitle }}</p>
+            <p class="text-light text-center">{{ res?.snippet?.publishedAt | date: 'dd-MM-yyyy' }}</p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="showVideoDetails">
+      <app-video-details [results]="videoInfo"></app-video-details>
+    </ng-container>
+  </ng-container>
+  <ng-container *ngIf="!results && loading">
+    <app-loader></app-loader>
+  </ng-container>
+  <div class="py-5">
+    <app-navbar></app-navbar>
+  </div>
+</div>

@@ -12,6 +12,9 @@ import { SearchComponent } from './search/search.component';
 import { LikedComponent } from './liked/liked.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilteredVideosComponent } from './search/filtered-videos/filtered-videos.component';
+import { LoaderComponent } from './loader/loader.component';
+import { VideoDetailsComponent } from './search/filtered-videos/video-player/video-details.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBKgEs60v2Yi-EZzGGq8Bu0j8AuUr2J3gc",
@@ -29,7 +32,10 @@ const firebaseConfig = {
     MainComponent,
     NavbarComponent,
     SearchComponent,
-    LikedComponent
+    LikedComponent,
+    FilteredVideosComponent,
+    LoaderComponent,
+    VideoDetailsComponent
   ],
   imports: [
     BrowserModule,

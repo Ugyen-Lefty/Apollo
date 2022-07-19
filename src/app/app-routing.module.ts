@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LikedComponent } from './liked/liked.component';
 import { MainComponent } from './main/main.component';
+import { FilteredVideosComponent } from './search/filtered-videos/filtered-videos.component';
 import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
     path: 'liked',
     component: LikedComponent
   },
+  { path: 'search/:query', component: FilteredVideosComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class SearchComponent implements OnInit {
 
   searchForm: any;
 
-  constructor(private api: ApiService, private fb: FormBuilder) { }
+  constructor(private api: ApiService, private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this.initializer();
@@ -24,7 +25,7 @@ export class SearchComponent implements OnInit {
   }
 
   search() {
-    this.api.getYoutubeVideo(this.searchForm.get('search').value).subscribe();
+    this.router.navigate([`search/${this.searchForm.get('search').value}`]);
   }
 
 }

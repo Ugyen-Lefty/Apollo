@@ -73,9 +73,9 @@
   }
 
   &__icon-container {
-    height: calc(var(--font-size) + 2rem);
+    height: calc(var(--font-size) + 1rem);
     position: relative;
-    width: calc(var(--font-size) + 2rem);
+    width: calc(var(--font-size) + 1rem);
   }
 
   &__label,

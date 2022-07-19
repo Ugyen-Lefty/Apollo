@@ -9,6 +9,7 @@ import { ApiService } from '../api.service';
 export class MainComponent implements OnInit {
   
   topTracks: any;
+  loading = true;
 
   constructor(private api: ApiService) { }
 
@@ -19,6 +20,7 @@ export class MainComponent implements OnInit {
   initializer(): void {
     this.api.getTopTracks().subscribe(res => {
       this.topTracks = res;
+      this.loading = false;
     });
   }
 
