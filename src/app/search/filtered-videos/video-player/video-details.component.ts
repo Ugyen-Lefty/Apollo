@@ -13,7 +13,6 @@ export class VideoDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.results;
-    debugger
   }
 
 }
